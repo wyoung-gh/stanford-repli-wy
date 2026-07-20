@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400;1,6..72,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Chivo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+
+  /* Custom d.school Brand Colors */
+  --color-workshop-teal: #79D7D9;
+  --color-tool-blue: #10AAF8;
+  --color-story-yellow: #E5D186;
+  --color-project-peach: #FFCAC5;
+  --color-impact-red: #EB2A23;
+  --color-surface-container-highest: #ebe3bf;
+  --color-surface-variant: #ebe3bf;
+  --color-surface-container-high: #f0e9c5;
+  --color-surface-container: #f6eeca;
+  --color-background: #FCFCF7;
+  --color-on-background: #1f1c06;
+  --color-on-surface-variant: #5d3f3b;
+}
+
+@layer utilities {
+  .masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 2px;
+  }
+}
+
+/* Custom CSS for continuous horizontal scrolling marquee ticker */
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: ticker-scroll 25s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Hide scrollbar for cleaner overlay and dialog scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

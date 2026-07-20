@@ -1,0 +1,6 @@
+{
+  "name": "Stanford d.school Everything",
+  "description": "An elegant, interactive digital gallery showcasing Stanford d.school workshops, tools, stories, and programs with advanced search and filtering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
